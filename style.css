@@ -1,0 +1,38 @@
+* {
+    margin: 0px;
+}
+
+header {
+    position: absolute;
+    background-color: #4196ab;
+    width: 100%;
+    padding:20px;
+    color: white;
+    display: grid;
+    grid-template: repeat(2,1fr);
+    justify-content: left;
+    align-items: center;
+}
+
+#imgHeader {
+    width: 100px;
+    box-sizing: border-box;
+    grid-area: 1 / 2 / span 2 / 1;
+    margin-left:30px;
+}
+h1,
+p {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bolder;
+    text-shadow: 10px;
+    grid-area: 1 / 2 / 1 / 2; /*valores-> InicioFila/InicioColumna/FinFila/FinColumna*/
+}
+
+p {
+    grid-area: 2 / 2 / 2 / 2; /*valores-> InicioFila/InicioColumna/FinFila/FinColumna*/
+    font-size: 12px;
+}
