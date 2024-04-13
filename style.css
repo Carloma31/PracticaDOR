@@ -1,11 +1,20 @@
 * {
     margin: 0px;
+    font-family: Utendo; /*Fuente establecida en la documentacion*/
+}
+
+body,html{
+    /* 
+    *   Establecemos los valores para que los elementos
+    *   Ocupen el 100% de la página y no sobrepasen
+    */
+    width: 100%;
+    height: 100%;
 }
 
 header {
-    position: absolute;
+    position: relative;
     background-color: #4196ab;
-    width: 100%;
     padding:20px;
     color: white;
     display: grid;
@@ -14,15 +23,16 @@ header {
     align-items: center;
 }
 
-#imgHeader {
-    width: 100px;
+#logo {
+    width: 150px; 
     box-sizing: border-box;
-    grid-area: 1 / 2 / span 2 / 1;
-    margin-left:30px;
+    grid-area: span 2;
+    
 }
 h1,
 p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    
+    letter-spacing: 5px; /*Espacios entre letras*/
 }
 
 h1 {
@@ -32,7 +42,60 @@ h1 {
     grid-area: 1 / 2 / 1 / 2; /*valores-> InicioFila/InicioColumna/FinFila/FinColumna*/
 }
 
-p {
-    grid-area: 2 / 2 / 2 / 2; /*valores-> InicioFila/InicioColumna/FinFila/FinColumna*/
-    font-size: 12px;
+/*
+* Parametros para la barra de navegacion
+*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding:3px;
 }
+
+/* 
+*   Zona de configuracion de los elementos de categorias
+*/
+#navCategories{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    gap: 50px;
+    transform: translate(0%,50%);
+}
+
+a{
+/*
+*   Quitamos el subrayado de las categorias
+*   Le marcamos estilo "Negrita"
+*/
+    font-weight: bolder;
+    text-decoration: none;    
+}
+
+/*Zona de los iconos en la barra de navegacion*/
+#navFunctions{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    transform: translate(80%,0%);
+ 
+
+
+}
+#Favorites{
+    width:35px;
+    height: 30px;
+}
+#cart{
+    width:30px;
+    height: 30px;
+}
+
+#search{
+    border:solid 2px black;
+    border-radius: 15px;
+    padding:5px;
+}
+
+
+
