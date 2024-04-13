@@ -1,0 +1,70 @@
+/* Copiar los @font-face para importar la fuente */
+
+@font-face {
+    font-family: utendo;
+    src: url(fonts/Utendo-Light.ttf);
+    font-weight: light;
+}
+
+@font-face {
+    font-family: utendo;
+    src: url(fonts/Utendo-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: utendo;
+    src: url(fonts/Utendo-Medium.ttf);
+    font-weight: medium;
+}
+@font-face {
+    font-family: utendo;
+    src: url(fonts/Utendo-Regular.ttf);
+}
+
+html *{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: utendo;
+}
+
+/* Estilo para el catalogo */
+
+main {
+    padding-left: 10%;
+    padding-top: 5%;
+    width: 60%;
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(4, 1fr) 
+}
+
+main card{
+    border-radius: 5px;
+    text-align: center;
+}
+main card:hover {
+    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.70);
+    height: 300px;
+    width: 300px;
+    transform: scale(1.40);
+}
+
+main card img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+}
+
+main card img:hover{
+    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.70);
+}
+.art-description{
+    font-size: large;
+}
+.price {
+    color: grey;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: end;
+}
