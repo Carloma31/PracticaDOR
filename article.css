@@ -30,27 +30,22 @@ html *{
 }
 
 /*  eliminar */
-header {
-    height: 180px;
-    background-color: rgb(69, 146, 197);
-}
-
 footer {
     height: 80px;
-    background-color: #4592c5;
+    background-color: #4196ab;
 }
 /*  */
 main{
     display:grid;
     grid-template:
     "div aside";
-    margin-bottom: 50px;
+    padding-bottom: 50px;
 }
 
 .cards-container{
-    margin: 2% 0 0 20%;
-    height: 800px;
-    width: 900px;
+    margin: 2% 0 0 25%;
+    height: 600px;
+    width: 700px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
@@ -66,19 +61,25 @@ main{
     height: 300px;
     width: 300px;
     object-fit: cover;
+    border-radius: 8px;
 
 }
 
 .cards-container img:hover{
+    transition: 0.5s;
     box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.70);
-    transform: scale(1.5);
+    transform: scale(2);
+    position: absolute;
+    z-index: 10;
 }
 
 aside{
-    border: #a5a5a5 solid 2px;
+    border: 2px solid hsl(0, 0%, 25%, 0.3);
     border-radius: 2%;
+    position: relative;
     display: flex;
-    margin: 2% 15% 5% 3%;
+    right: 400px;
+    top: 20px;
     padding: 60px 10px 50px 30px;
     width: 300px;
     flex-direction: column;
@@ -91,7 +92,6 @@ aside{
 
 .product-description{
     margin-top: 10px;
-
 }
 
 .price-article{
@@ -99,12 +99,13 @@ aside{
     width: 100px;
     color: white;
     margin-top: 20px;
-    background-color: rgb(69, 146, 197);
+    background-color: #42b5c7;
     text-align: center;
     justify-content: center;
     margin-left: 30%;
     margin-top: 50px;
     font-size: 20px;
+    border-radius: 3px;
 }
 
 .iva{
@@ -117,7 +118,7 @@ aside{
 }
 
 aside button{
-    border: 2px solid black;
+    border: 2px solid hsl(0, 0%, 25%, 0.3);
     border-radius: 3px;
     background: none;
     margin:2%;
@@ -125,6 +126,8 @@ aside button{
     height: 50px;
     width: 50px;
 }
+
+
 
 #select-red{
     background-color: red;
@@ -145,9 +148,17 @@ aside button{
 .select-size{
     padding-top: 10px;
 }
+
+.color-select button:hover{
+    transform: scale(1.3);
+}
 .select-size button{
     font-weight: bolder;
     font-size: 15px;
+}
+
+.select-size button:hover{
+    transform: scale(1.3);
 }
 
 .add-cart-buttons{
@@ -157,7 +168,7 @@ aside button{
 }
 
 .add-cart-buttons select{
-    border: 2px solid black;
+    border: 2px solid hsl(0, 0%, 25%, 0.3);
     border-radius: 10%;
     background: none;
     margin:2%;
@@ -176,6 +187,71 @@ aside button{
     border-radius: 10%;
 }
 
+.add-cart:hover{
+    transform: scale(1.3);
+}
+
+#favbtn{
+    position: absolute;
+    border: 2px solid hsl(0, 0%, 25%, 0.3);
+    border-radius: 50%;
+    padding: 13px;
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+#favbtn:hover{
+    transform: scale(1.3);
+}
+
+.related-products {
+    position: static;
+    display: flex;
+    margin-top: 150px;
+    margin-left: 250px;
+    width: 88%;
+    gap:30px;
+    overflow-x: auto;
+    height: auto;
+    padding-bottom: 15px;
+}
+
+.related-products-p{
+    position: absolute;
+    top:1040px;
+    left:80px;
+    border-bottom: solid black 1px;
+    width: 1750px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.related-products section img{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.related-products section img:hover{
+    transform: scale(1.3);
+    position: absolute;
+}
+.related-products a{
+    text-decoration: none;
+    color: #000;
+}
+
+.related-price{
+    border-radius: 5px;
+    position: relative;
+    width: fit-content;
+    padding: 3px;
+    background-color: #42b5c7;
+    top:-75px;
+    left:115px
+}
 /* Header y nav */
 
 header {
