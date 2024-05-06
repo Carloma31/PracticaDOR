@@ -28,6 +28,16 @@ html *{
     font-family: utendo;
 }
 
+header {
+    height: 180px;
+    background-color: rgb(69, 146, 197);
+}
+
+footer {
+    height: 80px;
+    background-color: rgb(69, 146, 197);
+}
+
 /* Estilo para el catalogo */
 
 main {
@@ -36,13 +46,15 @@ main {
     width: 60%;
     display: grid;
     gap: 100px;
-    grid-template-columns: repeat(4, 1fr) 
+    grid-template-columns: repeat(4, 1fr);
+    margin-bottom: 120px;
 }
 
 main card{
     border-radius: 5px;
     text-align: center;
 }
+
 main card:hover {
     box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.70);
     height: 300px;
