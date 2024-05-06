@@ -37,22 +37,20 @@ header {
 
 footer {
     height: 80px;
-    background-color: rgb(69, 146, 197);
+    background-color: #4592c5;
 }
 /*  */
 main{
-    display:flex;
+    display:grid;
     grid-template:
     "div aside";
-    justify-content: space-between;
-    margin-bottom: 100px;
+    margin-bottom: 50px;
 }
 
 .cards-container{
-    margin: 0 0 0 20%;
-    height: 80%;
-    width: 35%;
-    padding:50px 50px 50px;
+    margin: 2% 0 0 20%;
+    height: 800px;
+    width: 900px;
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     justify-items: center;
@@ -77,10 +75,12 @@ main{
 }
 
 aside{
+    border: #a5a5a5 solid 2px;
+    border-radius: 2%;
     display: flex;
-    margin: 0 12% 5% 3%;
-    padding: 60px 10px 0 30px;
-    width: fit-content;
+    margin: 2% 15% 5% 3%;
+    padding: 60px 10px 50px 30px;
+    width: 300px;
     flex-direction: column;
 }
 
@@ -161,9 +161,8 @@ aside button{
     border-radius: 10%;
     background: none;
     margin:2%;
-
     height: 50px;
-    width: 40%;
+    width: 60px;
     text-align: center;
     font-size: larger;
 
@@ -176,3 +175,92 @@ aside button{
     font-size: larger;
     border-radius: 10%;
 }
+
+/* Header y nav */
+
+header {
+    position: relative;
+    background-color: #4196ab;
+    padding:20px;
+    color: white;
+    display: grid;
+    grid-template: repeat(2,1fr);
+    justify-content: left;
+    align-items: center;
+}
+
+#logo {
+    width: 150px; 
+    box-sizing: border-box;
+    grid-area: span 2;
+    
+}
+h1,
+p {
+    
+    letter-spacing: 5px; /*Espacios entre letras*/
+}
+
+h1 {
+    font-size: 24px;
+    font-weight: bolder;
+    text-shadow: 10px;
+    grid-area: 1 / 2 / 1 / 2; /*valores-> InicioFila/InicioColumna/FinFila/FinColumna*/
+}
+
+/*
+* Parametros para la barra de navegacion
+*/
+nav{
+    display: flex;
+    justify-content: space-around;
+    position: relative;
+    padding:3px;
+}
+
+/* 
+*   Zona de configuracion de los elementos de categorias
+*/
+#navCategories{
+    display: flex;
+    justify-content: space-around;
+    position: absolute;
+    gap: 50px;
+    transform: translate(0%,50%);
+}
+
+#navCategories a{
+/*
+*   Quitamos el subrayado de las categorias
+*   Le marcamos estilo "Negrita"
+*/
+    font-weight: bolder;
+    text-decoration: none;    
+}
+
+/*Zona de los iconos en la barra de navegacion*/
+#navFunctions{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    transform: translate(80%,0%);
+ 
+}
+#Favorites{
+    width:35px;
+    height: 30px;
+}
+#cart{
+    width:30px;
+    height: 30px;
+}
+
+#search{
+    border:solid 2px black;
+    border-radius: 15px;
+    padding:5px;
+}
+
+/* fin header y nav */
+
+
