@@ -1,38 +1,531 @@
-* {
-    margin: 0px;
+/* Copiar los @font-face para importar la fuente */
+
+@font-face {
+    font-family: utendo;
+    src: url(fonts/Utendo-Light.ttf);
+    font-weight: light;
 }
 
-header {
-    position: absolute;
-    background-color: #4196ab;
+@font-face {
+    font-family: utendo;
+    src: url(fonts/Utendo-Bold.ttf);
+    font-weight: bold;
+}
+@font-face {
+    font-family: utendo;
+    src: url(fonts/Utendo-Medium.ttf);
+    font-weight: medium;
+}
+@font-face {
+    font-family: utendo;
+    src: url(fonts/Utendo-Regular.ttf);
+}
+
+html *{
+    margin: 0;
+    padding: 0;
     width: 100%;
-    padding:20px;
+    font-family: utendo;
+}
+
+#alt-main{
+    display:grid;
+    grid-template:
+    "div aside";
+    padding-bottom: 50px;
+}
+
+/* Header y nav */
+
+header {
+    background-color: #4196ab;
     color: white;
+    padding: 20px;
     display: grid;
-    grid-template: repeat(2,1fr);
-    justify-content: left;
+    grid-template-columns: 100px auto;
+    grid-template-rows: repeat(2, auto);
     align-items: center;
 }
 
 #imgHeader {
     width: 100px;
-    box-sizing: border-box;
-    grid-area: 1 / 2 / span 2 / 1;
-    margin-left:30px;
+    grid-area: 1 / 1 / 3 / 2;
+    margin-right: 30px;
 }
-h1,
-p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+h1, p {
+    letter-spacing: 5px;
 }
 
 h1 {
     font-size: 24px;
-    font-weight: bolder;
-    text-shadow: 10px;
-    grid-area: 1 / 2 / 1 / 2; /*valores-> InicioFila/InicioColumna/FinFila/FinColumna*/
+    grid-area: 1 / 2 / 2 / 3;
 }
 
 p {
-    grid-area: 2 / 2 / 2 / 2; /*valores-> InicioFila/InicioColumna/FinFila/FinColumna*/
     font-size: 12px;
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 0 20px 5px;
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    background-color: #f1f1f1;
+}
+
+#navCategories {
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+a{
+    font-weight: 650;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+#navFunctions {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-top: 5px;
+}
+
+#favorites, #cart {
+    width: 35px;
+    height: 35px;
+    margin: 0 20px 0 0;
+}
+
+#search {
+    border: solid 2px black;
+    border-radius: 15px;
+    padding: 5px 10px 5px 30px; /* Ajusta el padding izquierdo para dar espacio a la imagen */
+    background-image: url('./img/lupa.png'); /* Asegúrate de poner la ruta correcta a la imagen */
+    background-size: 20px 20px; /* Ajusta el tamaño de la imagen de la lupa */
+    background-position: left 10px center; /* Posiciona la imagen a la izquierda, centrada verticalmente */
+    background-repeat: no-repeat; /* Evita que la imagen se repita */
+    transform: scale(1.2);
+    margin-right: 50px;
+    width: 300px;
+}
+
+.ind-main{
+    display: flex;
+    align-items: stretch;
+    margin-top: 50px;
+    width: 100%;
+}
+
+#imagenSecundaria {
+    flex: 1;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: flex-start;
+    padding: 10px; /* Añade un poco de espacio interior */
+    max-width: 50%; /* Establece el máximo ancho para asegurar que no supere la mitad */
+    margin: -50px 0 0 150px;
+}
+
+#imagenSecundaria img {
+    width: 38%; /* Ajusta el ancho para dos columnas, con un pequeño espacio entre ellas */
+    margin: 20px 40px 20px 0;
+}
+
+#imagenPrincipal {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra la imagen principal horizontalmente */
+    align-items: center; /* Centra la imagen principal verticalmente */
+    max-width: 50%; /* Establece el máximo ancho para asegurar que no supere la mitad */
+    overflow: hidden; /* Esconde cualquier parte de la imagen que se desborde del contenedor */
+    margin: -20px 50px 0 0;
+}
+
+#imagenPrincipal img {
+    width: 100%; /* La imagen ocupa todo el ancho de su contenedor */
+    height: auto;    
+}
+
+.textoPrincipal {
+    color:#4196ab; /* Color blanco para mayor contraste con el fondo azul */
+    font-size: 24px; /* Tamaño del texto */
+    text-align: center; /* Alinea el texto al centro */
+    font-weight: bold; /* Texto en negrita */
+    width: 100%; /* Ocupa el ancho completo del contenedor */
+    padding: 20px 0; /* Espaciado vertical para más comodidad visual */
+    margin: -60px 0 40px 0;
+    background-color: rgba(241, 241, 241, 0.8); /* Fondo azul semi-transparente, usando el color #4196ab */
+    border-radius: 10px; /* Bordes redondeados para un look moderno */
+    transition: box-shadow 0.3s ease-in-out, background-color 0.3s ease-in-out; /* Transiciones suaves para sombra y color de fondo */
+}
+
+
+#imagenSecundaria img:hover, #imagenPrincipal img:hover {
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+#newsletters {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Asegura que los elementos estén distribuidos uniformemente */
+    background-color: #f1f1f1;
+    padding: 20px;
+    width: 100%;
+}
+
+#newslettersTexto {
+    flex: 1; /* Permite que el texto tome el espacio necesario, ajustando el formulario */
+    padding: 20px;
+    margin-right: 100px;
+    text-align: center;
+    max-width: 80%; /* Ajusta según la proporción deseada para más espacio al formulario */
+}
+
+#newslettersTexto h2{
+    font-size: 24px;
+    color: black;
+}
+
+#newslettersTexto p{
+    font-size: 18px;
+    color: black;
+}
+
+#newsletters form {
+    flex: 1;
+    padding: 50px 20px 50px 20px;
+    margin-right: 100px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    max-width: 25%;
+    align-items: center;
+}
+
+#newsletters label {
+    color: #4196ab;
+    font-weight: bold;
+    font-size: 20px; /* Ajusta el tamaño de la fuente para las etiquetas */
+    
+}
+
+#newsletters input[type="email"],
+#newsletters select {
+    width: 80%; /* Reduce el ancho de los inputs al 80% de su contenedor */
+    padding: 10px;
+    margin-top: 5px;
+    margin-bottom: 10px; /* Añade un margen inferior para separación */
+    border: 2px solid #4196ab;
+    border-radius: 5px;
+    font-size: 18px;
+}
+
+#newsletters input[type="submit"] {
+    background-color: #4196ab;
+    color: white;
+    font-weight: bold;
+    font-size: 18px; /* Ajusta el tamaño de fuente para el botón */
+    width: 80%;
+    padding: 12px 20px; /* Ajusta el padding para un botón más proporcional */
+    margin-top: 20px;
+    border: none;
+    cursor: pointer;
+}
+
+#estacion {
+    display: flex;
+    overflow: hidden; /* Mantener todas las imágenes dentro del contenedor */
+    width: 60%; /* Ajusta el ancho del contenedor para que sea más estrecho */
+    height: 700px; /* Altura fija para el contenedor, ajusta según tus necesidades */
+    margin: 120px auto 120px auto; /* Centra el contenedor horizontalmente y añade un margen inferior */
+    align-items: center; /* Alinea verticalmente las imágenes en caso de que tengan diferentes alturas */
+    justify-content: center; /* Asegura que el contenido se centre horizontalmente dentro del contenedor */
+}
+
+.responsive-img {
+    width: 100%;
+    height: 100%;
+    transition: width 0.3s ease-in-out, flex-grow 0.3s ease-in-out; /* Suaviza las transiciones de tamaño */
+    object-fit: cover; /* Mantiene las proporciones de la imagen al ajustar el tamaño */
+    flex: 1; /* Flexibilidad inicial para todas las imágenes */
+}
+
+.responsive-img:hover {
+    flex: 2; /* Aumenta el espacio de la imagen en hover */
+}
+
+
+/* fin header y nav */
+
+
+.cards-container{
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    height: 600px;
+    width: 700px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+}
+
+.cards-container section{
+
+    height: 70%;
+    width: 60%;
+}
+.cards-container img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+
+}
+
+.cards-container img:hover{
+    transition: 0.5s;
+    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.70);
+    transform: scale(2);
+    position: absolute;
+    z-index: 10;
+}
+
+.art-aside{
+    border: 2px solid hsl(0, 0%, 25%, 0.3);
+    border-radius: 2%;
+    position: relative;
+    display: flex;
+    right: 400px;
+    top: 20px;
+    padding: 60px 10px 50px 30px;
+    width: 300px;
+    flex-direction: column;
+}
+
+.product-name{
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.product-description{
+    margin-top: 10px;
+}
+
+.price-article{
+    height: 30px;
+    width: 100px;
+    color: white;
+    margin-top: 20px;
+    background-color: #42b5c7;
+    text-align: center;
+    justify-content: center;
+    margin-left: 30%;
+    margin-top: 50px;
+    font-size: 20px;
+    border-radius: 3px;
+}
+
+.iva{
+    margin-left: 40%;
+    margin-top: 10px;
+    border-bottom: 1px solid black;
+    width: fit-content;
+}
+
+.color-select{
+    margin-top: 50px;
+}
+
+.art-aside button{
+    border: 2px solid hsl(0, 0%, 25%, 0.3);
+    border-radius: 3px;
+    background: none;
+    margin:2%;
+    height: 50px;
+    width: 50px;
+}
+
+#color-select-1{
+    background-color: red;
+}
+
+#color-select-2{
+    background-color: white;
+}
+
+#color-select-3{
+    background-color: green;
+}
+
+#color-select-4{
+    background-color: yellow;
+}
+
+.select-size{
+    padding-top: 10px;
+}
+
+.color-select button:hover{
+    transform: scale(1.3);
+}
+.select-size button{
+    font-weight: bolder;
+    font-size: 15px;
+}
+
+.select-size button:hover{
+    transform: scale(1.3);
+}
+
+.add-cart-buttons{
+    padding-top: 60px;
+    padding-left: 10px;
+}
+
+.add-cart-buttons select{
+    border: 2px solid hsl(0, 0%, 25%, 0.3);
+    border-radius: 10%;
+    background: none;
+    margin:2%;
+    height: 50px;
+    width: 60px;
+    text-align: center;
+    font-size: larger;
+}
+
+.add-cart-buttons button {
+    height: 50px;
+    width: 100px;
+    text-align: center;
+    font-size: larger;
+    border-radius: 10%;
+}
+
+.add-cart:hover{
+    transform: scale(1.3);
+}
+
+#favbtn{
+    position: absolute;
+    border: 2px solid hsl(0, 0%, 25%, 0.3);
+    border-radius: 50%;
+    padding: 13px;
+    margin-left: 10px;
+    height: 30px;
+    width: 30px;
+}
+
+#favbtn:hover{
+    transform: scale(1.3);
+}
+
+.related-products {
+    position: static;
+    display: flex;
+    margin-top: 150px;
+    margin-left: 250px;
+    width: 88%;
+    gap:30px;
+    overflow-x: auto;
+    height: auto;
+    padding-bottom: 15px;
+    border-top: solid black 1px;
+    padding-top: 10px;
+}
+
+.related-products-p{
+    position: absolute;
+    top:1040px;
+    font-size: 25px;
+    font-weight: bold;
+
+}
+.related-products section img{
+    width: 200px;
+    height: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.related-products section img:hover{
+    transform: scale(1.3);
+    position: relative;
+    z-index: 10;
+    translate: 0, 50px;
+}
+.related-products a{
+    text-decoration: none;
+    color: #000;
+}
+
+.related-price{
+    border-radius: 5px;
+    position: relative;
+    width: fit-content;
+    padding: 3px;
+    background-color: #42b5c7;
+    top:-75px;
+    left:115px
+}
+
+
+
+
+/* Estilo para el catalogo */
+
+.ctlg{
+    padding-left: 10%;
+    padding-top: 5%;
+    width: 60%;
+    display: grid;
+    gap: 100px;
+    grid-template-columns: repeat(3, 1fr);
+    margin-bottom: 120px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.ctlg section{
+    border-radius: 5px;
+    text-align: center;
+}
+
+.ctlg section:hover {
+    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.70);
+    height: 300px;
+    width: 300px;
+    transform: scale(1.40);
+}
+
+.ctlg section img{
+    height: 300px;
+    width: 300px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.ctlg section img:hover{
+    box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.70);
+    transform: scale(1.4);
+    transition: 0.5s;
+}
+.art-description{
+    font-size: large;
+}
+.price {
+    color: grey;
+    font-size: larger;
+    font-weight: bolder;
+    text-align: end;
 }

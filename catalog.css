@@ -40,36 +40,42 @@ footer {
 
 /* Estilo para el catalogo */
 
-main {
+.ctlg{
     padding-left: 10%;
     padding-top: 5%;
     width: 60%;
     display: grid;
     gap: 100px;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 120px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 3px red solid;
 }
 
-main card{
+main article section{
     border-radius: 5px;
     text-align: center;
 }
 
-main card:hover {
+main article section:hover {
     box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.70);
     height: 300px;
     width: 300px;
     transform: scale(1.40);
 }
 
-main card img{
+main article section img{
     height: 300px;
     width: 300px;
     object-fit: cover;
+    border-radius: 8px;
 }
 
-main card img:hover{
+main article section img:hover{
     box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.70);
+    transform: scale(1.4);
+    transition: 0.5s;
 }
 .art-description{
     font-size: large;

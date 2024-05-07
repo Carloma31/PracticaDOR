@@ -1,21 +1,78 @@
 <!DOCTYPE html>
-<html lang="en">
-
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta title="UrbanPulse">
+    <meta name="description" content="Urban Pulse - La moda se encuentra donde termina el asfalto.">
     <title>UrbanPulse</title>
     <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
     <header>
-        <img id="imgHeader" src="./img/LOGO.jpg" alt="Logo" title="Esto es la imagen de la empresa">
-        
+        <img id="imgHeader" src="./img/LOGO.jpg" alt="Logo de Urban Pulse" title="Logo de Urban Pulse">
         <h1>URBAN PULSE</h1>
         <p>"LA MODA SE ENCUENTRA DONDE TERMINA EL ASFALTO"</p>
     </header>
-</body>
+    <nav>
+        <section id="navCategories">
+            <a href="#">HOME</a>
+            <a href="#">HOMBRE</a>
+            <a href="#">MUJER</a>
+            <a href="#">NIÑOS</a>
+        </section>
+        <section id="navFunctions">
+            <input id="search" type="search" placeholder="Búsqueda" />
+            <img id="favorites" src="./img/iconoFavoritos.png" alt="Favorites">
+            <img id="cart" src="./img/carrito.png" alt="View Cart">
+        </section>
+    </nav>
 
+    <main>
+        <article class="ind-main">
+            <section id="imagenSecundaria">
+                <img src="./img/index1.jpg" alt="Descripción imagen 1">
+                <img src="./img/index2.jpg" alt="Descripción imagen 2">
+                <img src="./img/index3.jpg" alt="Descripción imagen 3">
+                <img src="./img/index4.jpg" alt="Descripción imagen 4">
+            </section>
+            <article id="imagenPrincipal">
+                <span class="textoPrincipal">Captura el pulso de la calle en cada paso que das</span>
+                <img src="./img/index5.jpg" alt="Descripción imagen principal">
+            </article>
+        </article>
+    </main>
+    
+    <section id="estacion">
+            <img src="./img/primavera.jpg" alt="Imagen de primavera" title="Imagen catálogo primavera" class="responsive-img">
+            <img src="./img/verano.jpg" alt="Imagen de verano" title="Imagen catálogo verano" class="responsive-img">
+            <img src="./img/otono.jpg" alt="Imagen de otoño" title="Imagen catálogo otoño" class="responsive-img">
+            <img src="./img/invierno.jpg" alt="Imagen de invierno" title="Imagen catálogo invierno" class="responsive-img">
+        </figure>
+    </section>
+    
+    
+    <section id="newsletters">
+        <section id="newslettersTexto">
+            <h2>SUSCRÍBETE A LAS NEWSLETTERS</h2>
+            <p>¡Únete a nuestro boletín! Descubre las últimas tendencias, lanzamientos exclusivos y consejos de estilo. Suscríbete para ofertas especiales y la inspiración perfecta para ti. Únete a nuestra comunidad de moda hoy mismo.</p>
+        </section>
+        <form action="#" method="POST">
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="interest">Quiero informarme de:</label><br>
+            <select id="interest" name="interest" required>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+                <option value="niño">Niño</option>
+                <option value="todo">Todo</option>
+            </select><br>
+            <input type="submit" value="Suscribirse">
+        </form>
+    </section>
+
+    <footer>
+    
+    </footer>
+
+</body>
 </html>
