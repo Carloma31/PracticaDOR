@@ -38,7 +38,7 @@ html * {
     padding-bottom: 50px;
 }
 
-/* Header y nav */
+/* Header y Nav */
 
 header {
     background-color: #4196ab;
@@ -210,7 +210,7 @@ nav {
 
 
 
-/* Newsletters */
+/* Newsletters Index*/
 
 #newsletters {
     display: flex;
@@ -364,6 +364,105 @@ nav {
     margin: 5px -790px;
     /* Reduce los márgenes superior e inferior, y ajusta los laterales para más cercanía */
     font-size: 16px;
+}
+
+
+
+
+/* Footer */
+
+footer {
+    margin-top: 200px;
+    padding: 80px 40px;
+    text-align: center;
+    font-family: 'utendo', sans-serif;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+footer ul li {
+    margin-right: 10px;
+}
+
+footer ul li a {
+    font-size: 16px;
+}
+
+footer ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    margin: 5px 200px;
+}
+
+.footer-bottom p a {
+    font-size: 18px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.social-icon {
+    margin-left: 20px;
+    transition: transform 0.3s;
+    width: 40px;
+}
+
+.social-icon:first-child {
+    margin-left: 0;
+}
+
+.social-icon:hover img {
+    transform: scale(1.2);
+}
+
+
+
+
+/* Estilo Video Index */
+
+#video-index {
+    display: flex;
+    justify-content: center; /* Centra el video horizontalmente */
+    align-items: center; /* Centra el video verticalmente, si es necesario */
+    margin-bottom: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidad */
+    padding: 30px; /* Espaciado alrededor del video */
+    background: #f1f1f1; /* Fondo claro para el área del video */
+}
+
+video {
+    width: 100%; /* Ajusta el ancho del video al contenedor */
+    height: auto; /* Mantiene la relación de aspecto del video */
+    max-width: 1080px; /* Ancho máximo del video */
 }
 
 
@@ -640,98 +739,58 @@ nav {
 
 
 
-/* Estilo para el footer */
+/* Contacto */
 
-footer {
-    margin-top: 200px;
-    padding: 80px 40px;
-    text-align: center;
-    font-family: 'utendo', sans-serif;
-    background-color: #333;
-    color: white;
+/* Contenedor principal para el área de contacto, usando flexbox para alinear lado a lado */
+.contacto-main {
+    height: 45vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
+    padding: 0px 30px;
+    gap: 30px; /* Añade espacio entre los elementos del flex */
 }
 
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+/* Estilos para la sección de información de contacto */
+.contacto-info {
+    flex: 1;
+    max-width: 60%; /* Limita el ancho de la sección para no ocupar todo el espacio horizontal */
+    background-color: #fff;
+    padding: 30px;
+    margin: 50px 20px 0px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    text-align: left;
 }
 
-footer ul li {
-    margin-right: 10px;
+.contacto-info h2 {
+    font-size: 28px;
+    color: #4196ab;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4196ab;
+    padding-bottom: 10px;
 }
 
-footer ul li a {
-    font-size: 16px;
-}
-
-footer ul li:last-child {
-    margin-right: 0;
-}
-
-.footer-bottom p {
-    font-size: 12px;
-    margin: 5px 200px;
-}
-
-.footer-bottom p a {
+.contacto-info p {
     font-size: 18px;
+    color: black;
+    margin-bottom: 15px;
 }
 
-footer a {
-    text-decoration: none;
-    color: #ccc;
-    transition: color 0.3s;
+#mapa {
+    flex: 1;
+    max-width: 50%; /* Ajusta este valor según necesidades específicas del diseño */
+    height: 420px; /* Asegura que el mapa tenga una altura adecuada */
+    border-radius: 10px; /* Opcional: para mantener consistencia con contacto-info */
+    overflow: hidden; /* Esconde cualquier desbordamiento causado por el iframe del mapa */
+    padding-top: 50px;
 }
 
-footer a:hover {
-    color: #fff;
-}
-
-.social-icons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-left: auto;
-}
-
-.social-icon {
-    margin-left: 20px;
-    transition: transform 0.3s;
-    width: 40px;
-}
-
-.social-icon:first-child {
-    margin-left: 0;
-}
-
-.social-icon:hover img {
-    transform: scale(1.2);
+iframe {
+    width: 100%; /* Asegura que el iframe llene el contenedor */
+    height: 100%; /* Asegura que el iframe llene la altura del contenedor */
 }
 
 
-
-
-/* Estilo Video Index */
-
-#video-index {
-    display: flex;
-    justify-content: center; /* Centra el video horizontalmente */
-    align-items: center; /* Centra el video verticalmente, si es necesario */
-    margin-bottom: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidad */
-    padding: 30px; /* Espaciado alrededor del video */
-    background: #f1f1f1; /* Fondo claro para el área del video */
-}
-
-video {
-    width: 100%; /* Ajusta el ancho del video al contenedor */
-    height: auto; /* Mantiene la relación de aspecto del video */
-    max-width: 1080px; /* Ancho máximo del video */
+.contacto-footer { /* Clase para el footer de Contacto para que no haya scroll */
+    margin-top: 113px;   
 }
