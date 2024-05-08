@@ -136,6 +136,7 @@ nav {
     align-items: stretch;
     margin-top: 50px;
     width: 100%;
+    overflow: hidden;
 }
 
 #imagenSecundaria {
@@ -148,6 +149,7 @@ nav {
     max-width: 50%;
     /* Establece el máximo ancho para asegurar que no supere la mitad */
     margin: -50px 0 0 150px;
+    overflow: hidden;
 }
 
 #imagenSecundaria img {
@@ -862,6 +864,48 @@ iframe {
 }
 
 .faq p {
+    font-size: 16px; /* Tamaño de fuente más grande para mejorar la lectura */
+    color: #333; /* Color de texto más oscuro para mejor contraste */
+    margin-bottom: 20px; /* Espacio después de cada párrafo */
+    letter-spacing: 0;
+}
+
+
+
+
+/* Envíos */ 
+
+.envios {
+    display: flex;
+    flex-direction: column; /* Organiza las secciones verticalmente */
+    max-width: 800px; /* Ancho máximo más adecuado para la legibilidad */
+    background-color: #fff;
+    padding: 40px; /* Espacio interno aumentado para mayor claridad */
+    margin: 50px auto 30px auto; /* Centra la sección de FAQ en la página */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra más suave */
+    border-radius: 10px; /* Bordes ligeramente más redondeados */
+    text-align: left;
+}
+
+.envios-titulo {
+    padding: 50px;
+    font-size: 32px; /* Tamaño de fuente grande para el título principal */
+    color: #333; /* Color oscuro para el texto */
+    text-align: center; /* Centrar el título */
+    margin-bottom: 30px; /* Espacio debajo del título */
+    font-weight: bold; /* Fuente en negrita para destacar */
+    background-color: #f1f1f1;
+}
+
+.envios h3 {
+    font-size: 22px; /* Tamaño de fuente aumentado para encabezados */
+    color: #4196ab; /* Color modificado para una mejor visibilidad */
+    border-bottom: 2px solid #4196ab; /* Línea bajo el encabezado para enfatizar */
+    padding-bottom: 10px; /* Espacio bajo el encabezado */
+    margin-top: 20px; /* Espacio sobre el encabezado */
+}
+
+.envios p {
     font-size: 16px; /* Tamaño de fuente más grande para mejorar la lectura */
     color: #333; /* Color de texto más oscuro para mejor contraste */
     margin-bottom: 20px; /* Espacio después de cada párrafo */
