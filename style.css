@@ -316,55 +316,44 @@ nav {
 }
 
 #estacion {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,0%);
     display: flex;
-    overflow: hidden;
-    /* Mantener todas las imágenes dentro del contenedor */
-    width: 60%;
-    /* Ajusta el ancho del contenedor para que sea más estrecho */
-    height: 700px;
-    /* Altura fija para el contenedor, ajusta según tus necesidades */
-    margin: 80px auto 120px auto;
-    /* Centra el contenedor horizontalmente y añade un margen inferior */
-    align-items: center;
-    /* Alinea verticalmente las imágenes en caso de que tengan diferentes alturas */
-    justify-content: center;
-    /* Asegura que el contenido se centre horizontalmente dentro del contenedor */
+    width: 80%;
+    height: 500px;
 }
 
-.responsive-img {
-    width: 100%;
-    height: 100%;
-    transition: width 0.3s ease-in-out, flex-grow 0.3s ease-in-out;
-    /* Suaviza las transiciones de tamaño */
+#estacion img {
+    width: 0px;
+    flex-grow: 1;
     object-fit: cover;
-    /* Mantiene las proporciones de la imagen al ajustar el tamaño */
-    flex: 1;
-    /* Flexibilidad inicial para todas las imágenes */
+    opacity: .8;
+    transition: 0.3s ease;
 }
 
-.responsive-img:hover {
-    flex: 2;
-    /* Aumenta el espacio de la imagen en hover */
+#estacion img:hover{
+    width: 100px;
+    opacity: 1;
 }
+
 
 #estacion-texto {
-    display: flex;
+    display: inline-flex;
     justify-content: center;
     /* Asegura que los elementos estén centrados horizontalmente */
     margin-top: -100px;
     /* Reduce espacio superior */
     margin-bottom: 300px;
-    /* Espacio inferior */
-    padding-left: 30px;
-    /* Añade algo de padding si es necesario */
 }
 
 #estacion-texto p {
-    text-align: center;
-    margin: 5px -790px;
+    display:inline-flex;
+    width: 370px;
+    justify-content: center;
     /* Reduce los márgenes superior e inferior, y ajusta los laterales para más cercanía */
     font-size: 16px;
-    width: 1150px;
 }
 
 
