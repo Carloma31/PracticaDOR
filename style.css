@@ -350,6 +350,7 @@ nav {
 }
 
 #estacion-texto {
+    max-width: 100vh;
     display: flex;
     justify-content: center;
     /* Asegura que los elementos estén centrados horizontalmente */
@@ -357,7 +358,7 @@ nav {
     /* Reduce espacio superior */
     margin-bottom: 300px;
     /* Espacio inferior */
-    padding-left: 30px;
+    padding-left: 980px;
     /* Añade algo de padding si es necesario */
 }
 
