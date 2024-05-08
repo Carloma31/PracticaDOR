@@ -731,7 +731,6 @@ video {
 
 /* Contacto */
 
-/* Contenedor principal para el área de contacto, usando flexbox para alinear lado a lado */
 .contacto-main {
     height: 45vh;
     display: flex;
@@ -740,7 +739,6 @@ video {
     gap: 30px; /* Añade espacio entre los elementos del flex */
 }
 
-/* Estilos para la sección de información de contacto */
 .contacto-info {
     flex: 1;
     max-width: 60%; /* Limita el ancho de la sección para no ocupar todo el espacio horizontal */
@@ -780,9 +778,80 @@ iframe {
     height: 100%; /* Asegura que el iframe llene la altura del contenedor */
 }
 
-
 .contacto-footer { /* Clase para el footer de Contacto para que no haya scroll */
     margin-top: 113px;   
+}
+
+.contacto-form {
+    flex: 1;
+    padding: 30px; /* Espaciado interno ajustado */
+    margin-top: 50px;
+    margin-right: 20px;
+    margin-left: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Asegura que el formulario use el espacio disponible adecuadamente */
+}
+
+.contacto-form form {
+    width: 100%; /* Hace que el formulario use todo el espacio disponible del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto-form label {
+    font-size: 16px; /* Tamaño de fuente para las etiquetas */
+    color: #333; /* Color oscuro para mejor lectura */
+    margin-bottom: 5px; /* Espacio debajo de cada etiqueta */
+    width: 100%; /* Asegura que la etiqueta ocupe el ancho completo */
+    display: block; /* Hace que la etiqueta sea un bloque para mejor alineación */
+}
+
+.contacto-form input[type="text"],
+.contacto-form input[type="email"],
+.contacto-form textarea {
+    width: 100%; /* Hace que los inputs ocupen todo el ancho disponible */
+    padding: 5px; /* Padding para hacer los inputs más fáciles de interactuar */
+    margin-bottom: 20px; /* Espacio debajo de cada input */
+    border: 1px solid #ccc; /* Borde sutil para los inputs */
+    border-radius: 5px; /* Bordes redondeados para los inputs */
+}
+
+.contacto-form button {
+    width: 48%; /* Ajusta el ancho para que dos botones quepan en la misma fila */
+    padding: 10px 0; /* Padding vertical para hacer el botón más prominente */
+    margin-top: 20px; /* Espacio sobre el botón */
+    background-color: #4196ab; /* Color de fondo para el botón enviar */
+    color: white; /* Color de texto para el botón */
+    border: none; /* Sin borde para el botón */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+    cursor: pointer; /* Cursor en forma de mano para indicar que es clickeable */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    margin-right: 2%; /* Margen derecho para separar los botones */
+}
+
+.contacto-form button:hover {
+    background-color: #317088; /* Color al hacer hover más oscuro para efecto visual */
+}
+
+.contacto-form .reset-button {
+    background-color: #ccc; /* Fondo gris para el botón de limpiar */
+    color: #333; /* Texto oscuro para contraste */
+}
+
+.contacto-form .reset-button:hover {
+    background-color: #bbb; /* Oscurecer al hacer hover */
+}
+
+.buttons-container {
+    width: 100%; /* Toma todo el ancho del formulario */
+    display: flex; /* Usa flexbox para alinear los botones horizontalmente */
+    justify-content: space-between; /* Separa completamente los botones */
 }
 
 
