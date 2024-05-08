@@ -782,3 +782,46 @@ iframe {
 .contacto-footer { /* Clase para el footer de Contacto para que no haya scroll */
     margin-top: 113px;   
 }
+
+
+
+
+/* Quienes Somos */ 
+/* Estilos para la sección de quienes somos */
+
+.quienes-somos-main {
+    height: 55vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    margin-bottom: 50px;
+    gap: 30px; /* Añade espacio entre los elementos del flex */
+}
+
+.quienes-somos {
+    flex: 1;
+    max-width: 100%; /* Limita el ancho de la sección para no ocupar todo el espacio horizontal */
+    background-color: #fff;
+    padding: 30px;
+    margin: 50px 20px 0px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.quienes-somos h2 {
+    font-size: 28px;
+    color: #4196ab;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4196ab;
+    padding-bottom: 5px;
+}
+
+.quienes-somos p {
+    font-size: 16px;
+    color: black;
+}
+
+.quienes-somos-footer { /* Clase para el footer de Contacto para que no haya scroll */
+    margin-top: -30px;   
+}
