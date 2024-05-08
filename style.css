@@ -38,7 +38,7 @@ html * {
     padding-bottom: 50px;
 }
 
-/* Header y nav */
+/* Header y Nav */
 
 header {
     background-color: #4196ab;
@@ -54,6 +54,7 @@ header {
     width: 100px;
     grid-area: 1 / 1 / 3 / 2;
     margin-right: 30px;
+    cursor: pointer;
 }
 
 h1,
@@ -76,7 +77,9 @@ nav {
     align-items: center;
     width: 100%;
     padding: 0 20px 5px;
-    position: relative;
+    position: sticky;
+    top:0;
+    z-index:5;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
     background-color: #f1f1f1;
 }
@@ -136,6 +139,7 @@ nav {
     align-items: stretch;
     margin-top: 50px;
     width: 100%;
+    overflow: hidden;
 }
 
 #imagenSecundaria {
@@ -148,6 +152,7 @@ nav {
     max-width: 50%;
     /* Establece el máximo ancho para asegurar que no supere la mitad */
     margin: -50px 0 0 150px;
+    overflow: hidden;
 }
 
 #imagenSecundaria img {
@@ -210,7 +215,7 @@ nav {
 
 
 
-/* Newsletters */
+/* Newsletters Index*/
 
 #newsletters {
     display: flex;
@@ -340,20 +345,120 @@ nav {
 
 
 #estacion-texto {
-    display: inline-flex;
+    max-width: 100vh;
+    display: flex;
     justify-content: center;
     /* Asegura que los elementos estén centrados horizontalmente */
     margin-top: -100px;
     /* Reduce espacio superior */
     margin-bottom: 300px;
+    /* Espacio inferior */
+    padding-left: 980px;
+    /* Añade algo de padding si es necesario */
 }
 
 #estacion-texto p {
-    display:inline-flex;
-    width: 370px;
-    justify-content: center;
+    text-align: center;
+    margin: 5px -725px;
     /* Reduce los márgenes superior e inferior, y ajusta los laterales para más cercanía */
     font-size: 16px;
+}
+
+
+/* Footer */
+
+footer {
+    margin-top: 200px;
+    padding: 80px 40px;
+    text-align: center;
+    font-family: 'utendo', sans-serif;
+    background-color: #333;
+    color: white;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    width: 100%;
+}
+
+footer ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+footer ul li {
+    margin-right: 10px;
+}
+
+footer ul li a {
+    font-size: 16px;
+}
+
+footer ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-bottom p {
+    font-size: 12px;
+    margin: 5px 200px;
+}
+
+.footer-bottom p a {
+    font-size: 18px;
+}
+
+footer a {
+    text-decoration: none;
+    color: #ccc;
+    transition: color 0.3s;
+}
+
+footer a:hover {
+    color: #fff;
+}
+
+.social-icons {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    margin-left: auto;
+}
+
+.social-icon {
+    margin-left: 20px;
+    transition: transform 0.3s;
+    width: 40px;
+}
+
+.social-icon:first-child {
+    margin-left: 0;
+}
+
+.social-icon:hover img {
+    transform: scale(1.2);
+}
+
+
+
+
+/* Estilo Video Index */
+
+#video-index {
+    display: flex;
+    justify-content: center; /* Centra el video horizontalmente */
+    align-items: center; /* Centra el video verticalmente, si es necesario */
+    margin-bottom: 300px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidad */
+    padding: 30px; /* Espaciado alrededor del video */
+    background: #f1f1f1; /* Fondo claro para el área del video */
+}
+
+video {
+    width: 100%; /* Ajusta el ancho del video al contenedor */
+    height: auto; /* Mantiene la relación de aspecto del video */
+    max-width: 1080px; /* Ancho máximo del video */
 }
 
 
@@ -617,98 +722,254 @@ nav {
 
 
 
-/* Estilo para el footer */
+/* Contacto */
 
-footer {
-    margin-top: 200px;
-    padding: 80px 40px;
-    text-align: center;
-    font-family: 'utendo', sans-serif;
-    background-color: #333;
-    color: white;
+.contacto-main {
+    height: 45vh;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    box-sizing: border-box;
-    width: 100%;
+    padding: 0px 30px;
+    gap: 30px; /* Añade espacio entre los elementos del flex */
 }
 
-footer ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
+.contacto-info {
+    flex: 1;
+    max-width: 60%; /* Limita el ancho de la sección para no ocupar todo el espacio horizontal */
+    background-color: #fff;
+    padding: 30px;
+    margin: 50px 20px 0px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    text-align: left;
 }
 
-footer ul li {
-    margin-right: 10px;
+.contacto-info h2 {
+    font-size: 28px;
+    color: #4196ab;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4196ab;
+    padding-bottom: 10px;
 }
 
-footer ul li a {
-    font-size: 16px;
-}
-
-footer ul li:last-child {
-    margin-right: 0;
-}
-
-.footer-bottom p {
-    font-size: 12px;
-    margin: 5px 200px;
-}
-
-.footer-bottom p a {
+.contacto-info p {
     font-size: 18px;
+    color: black;
+    margin-bottom: 15px;
 }
 
-footer a {
-    text-decoration: none;
-    color: #ccc;
-    transition: color 0.3s;
+#mapa {
+    flex: 1;
+    max-width: 50%; /* Ajusta este valor según necesidades específicas del diseño */
+    height: 420px; /* Asegura que el mapa tenga una altura adecuada */
+    border-radius: 10px; /* Opcional: para mantener consistencia con contacto-info */
+    overflow: hidden; /* Esconde cualquier desbordamiento causado por el iframe del mapa */
+    padding-top: 50px;
 }
 
-footer a:hover {
-    color: #fff;
+iframe {
+    width: 100%; /* Asegura que el iframe llene el contenedor */
+    height: 100%; /* Asegura que el iframe llene la altura del contenedor */
 }
 
-.social-icons {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    margin-left: auto;
+.contacto-footer { /* Clase para el footer de Contacto para que no haya scroll */
+    margin-top: 113px;   
 }
 
-.social-icon {
+.contacto-form {
+    flex: 1;
+    padding: 30px; /* Espaciado interno ajustado */
+    margin-top: 50px;
+    margin-right: 20px;
     margin-left: 20px;
-    transition: transform 0.3s;
-    width: 40px;
-}
-
-.social-icon:first-child {
-    margin-left: 0;
-}
-
-.social-icon:hover img {
-    transform: scale(1.2);
-}
-
-
-
-
-/* Estilo Video Index */
-
-#video-index {
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     display: flex;
-    justify-content: center; /* Centra el video horizontalmente */
-    align-items: center; /* Centra el video verticalmente, si es necesario */
-    margin-bottom: 300px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave para dar profundidad */
-    padding: 30px; /* Espaciado alrededor del video */
-    background: #f1f1f1; /* Fondo claro para el área del video */
+    flex-direction: column;
+    align-items: center;
+    width: 100%; /* Asegura que el formulario use el espacio disponible adecuadamente */
 }
 
-video {
-    width: 100%; /* Ajusta el ancho del video al contenedor */
-    height: auto; /* Mantiene la relación de aspecto del video */
-    max-width: 1080px; /* Ancho máximo del video */
+.contacto-form form {
+    width: 100%; /* Hace que el formulario use todo el espacio disponible del contenedor */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contacto-form label {
+    font-size: 16px; /* Tamaño de fuente para las etiquetas */
+    color: #333; /* Color oscuro para mejor lectura */
+    margin-bottom: 5px; /* Espacio debajo de cada etiqueta */
+    width: 100%; /* Asegura que la etiqueta ocupe el ancho completo */
+    display: block; /* Hace que la etiqueta sea un bloque para mejor alineación */
+}
+
+.contacto-form input[type="text"],
+.contacto-form input[type="email"],
+.contacto-form textarea {
+    width: 100%; /* Hace que los inputs ocupen todo el ancho disponible */
+    padding: 5px; /* Padding para hacer los inputs más fáciles de interactuar */
+    margin-bottom: 20px; /* Espacio debajo de cada input */
+    border: 1px solid #ccc; /* Borde sutil para los inputs */
+    border-radius: 5px; /* Bordes redondeados para los inputs */
+}
+
+.contacto-form button {
+    width: 48%; /* Ajusta el ancho para que dos botones quepan en la misma fila */
+    padding: 10px 0; /* Padding vertical para hacer el botón más prominente */
+    margin-top: 20px; /* Espacio sobre el botón */
+    background-color: #4196ab; /* Color de fondo para el botón enviar */
+    color: white; /* Color de texto para el botón */
+    border: none; /* Sin borde para el botón */
+    border-radius: 5px; /* Bordes redondeados para el botón */
+    cursor: pointer; /* Cursor en forma de mano para indicar que es clickeable */
+    transition: background-color 0.3s; /* Transición suave del color de fondo */
+    margin-right: 2%; /* Margen derecho para separar los botones */
+}
+
+.contacto-form button:hover {
+    background-color: #317088; /* Color al hacer hover más oscuro para efecto visual */
+}
+
+.contacto-form .reset-button {
+    background-color: #ccc; /* Fondo gris para el botón de limpiar */
+    color: #333; /* Texto oscuro para contraste */
+}
+
+.contacto-form .reset-button:hover {
+    background-color: #bbb; /* Oscurecer al hacer hover */
+}
+
+.buttons-container {
+    width: 100%; /* Toma todo el ancho del formulario */
+    display: flex; /* Usa flexbox para alinear los botones horizontalmente */
+    justify-content: space-between; /* Separa completamente los botones */
+}
+
+
+
+
+/* Quienes Somos */ 
+
+.quienes-somos-main {
+    height: 55vh;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 30px;
+    margin-bottom: 50px;
+    gap: 30px; /* Añade espacio entre los elementos del flex */
+}
+
+.quienes-somos {
+    flex: 1;
+    max-width: 100%; /* Limita el ancho de la sección para no ocupar todo el espacio horizontal */
+    background-color: #fff;
+    padding: 30px;
+    margin: 50px 20px 0px 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    text-align: left;
+}
+
+.quienes-somos h2 {
+    font-size: 28px;
+    color: #4196ab;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #4196ab;
+    padding-bottom: 5px;
+}
+
+.quienes-somos p {
+    font-size: 16px;
+    color: black;
+    letter-spacing: 0px;
+}
+
+.quienes-somos-footer { /* Clase para el footer de Contacto para que no haya scroll */
+    margin-top: -30px;   
+}
+
+
+
+
+/* FAQ */ 
+
+.faq {
+    display: flex;
+    flex-direction: column; /* Organiza las secciones verticalmente */
+    max-width: 800px; /* Ancho máximo más adecuado para la legibilidad */
+    background-color: #fff;
+    padding: 40px; /* Espacio interno aumentado para mayor claridad */
+    margin: 50px auto 30px auto; /* Centra la sección de FAQ en la página */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra más suave */
+    border-radius: 10px; /* Bordes ligeramente más redondeados */
+    text-align: left;
+}
+
+.faq-titulo {
+    padding: 50px;
+    font-size: 32px; /* Tamaño de fuente grande para el título principal */
+    color: #333; /* Color oscuro para el texto */
+    text-align: center; /* Centrar el título */
+    margin-bottom: 30px; /* Espacio debajo del título */
+    font-weight: bold; /* Fuente en negrita para destacar */
+    background-color: #f1f1f1;
+}
+
+.faq h3 {
+    font-size: 22px; /* Tamaño de fuente aumentado para encabezados */
+    color: #4196ab; /* Color modificado para una mejor visibilidad */
+    border-bottom: 2px solid #4196ab; /* Línea bajo el encabezado para enfatizar */
+    padding-bottom: 10px; /* Espacio bajo el encabezado */
+    margin-top: 20px; /* Espacio sobre el encabezado */
+}
+
+.faq p {
+    font-size: 16px; /* Tamaño de fuente más grande para mejorar la lectura */
+    color: #333; /* Color de texto más oscuro para mejor contraste */
+    margin-bottom: 20px; /* Espacio después de cada párrafo */
+    letter-spacing: 0;
+}
+
+
+
+
+/* Envíos */ 
+
+.envios {
+    display: flex;
+    flex-direction: column; /* Organiza las secciones verticalmente */
+    max-width: 800px; /* Ancho máximo más adecuado para la legibilidad */
+    background-color: #fff;
+    padding: 40px; /* Espacio interno aumentado para mayor claridad */
+    margin: 50px auto 30px auto; /* Centra la sección de FAQ en la página */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1); /* Sombra más suave */
+    border-radius: 10px; /* Bordes ligeramente más redondeados */
+    text-align: left;
+}
+
+.envios-titulo {
+    padding: 50px;
+    font-size: 32px; /* Tamaño de fuente grande para el título principal */
+    color: #333; /* Color oscuro para el texto */
+    text-align: center; /* Centrar el título */
+    margin-bottom: 30px; /* Espacio debajo del título */
+    font-weight: bold; /* Fuente en negrita para destacar */
+    background-color: #f1f1f1;
+}
+
+.envios h3 {
+    font-size: 22px; /* Tamaño de fuente aumentado para encabezados */
+    color: #4196ab; /* Color modificado para una mejor visibilidad */
+    border-bottom: 2px solid #4196ab; /* Línea bajo el encabezado para enfatizar */
+    padding-bottom: 10px; /* Espacio bajo el encabezado */
+    margin-top: 20px; /* Espacio sobre el encabezado */
+}
+
+.envios p {
+    font-size: 16px; /* Tamaño de fuente más grande para mejorar la lectura */
+    color: #333; /* Color de texto más oscuro para mejor contraste */
+    margin-bottom: 20px; /* Espacio después de cada párrafo */
+    letter-spacing: 0;
 }
