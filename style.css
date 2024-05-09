@@ -711,9 +711,9 @@ video {
     position: relative;
     width: fit-content;
     padding: 3px;
-    background-color: #4196ab;
-    color: white;
-    top: 290px;
+    color: black;
+    font-weight: 700;
+    top: 300px;
     left: 120px;
 }
 
