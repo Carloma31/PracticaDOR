@@ -91,7 +91,7 @@ nav {
 
 #navCategories a {
     font-weight: 550;
-    font-size: 16px;
+    font-size: 17px;
     text-decoration: none;
     text-align: center;
     color: black;
@@ -184,9 +184,8 @@ nav.breadcrumbs a:hover {
 #imagenSecundaria img {
     width: 36%;
     /* Ajusta el ancho para dos columnas, con un pequeño espacio entre ellas */
-    margin: 60px 40px -5px 0;
+    margin: 55px 40px -5px 0;
     border: 3px solid #f1f1f1; /* Borde claro */
-    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2); /* Sombra sutil */
     transition: border-color 0.3s ease; /* Suaviza la transición del color del borde */
     filter: grayscale(0%); /* Aplica un filtro de escala de grises */
     transition: filter 0.3s ease;
@@ -228,8 +227,7 @@ nav.breadcrumbs a:hover {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
 }
 
-#imagenSecundaria img:hover,
-#imagenPrincipal img:hover {
+#imagenSecundaria img:hover {
     box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.3);
 }
 
