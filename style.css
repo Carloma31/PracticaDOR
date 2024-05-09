@@ -321,47 +321,52 @@ nav {
 }
 
 #estacion {
-    position: relative;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,0%);
     display: flex;
-    width: 80%;
-    height: 500px;
+    overflow: hidden;
+    /* Mantener todas las imágenes dentro del contenedor */
+    width: 60%;
+    /* Ajusta el ancho del contenedor para que sea más estrecho */
+    height: 700px;
+    /* Altura fija para el contenedor, ajusta según tus necesidades */
+    margin: 80px auto 120px auto;
+    /* Centra el contenedor horizontalmente y añade un margen inferior */
+    align-items: center;
+    /* Alinea verticalmente las imágenes en caso de que tengan diferentes alturas */
+    justify-content: center;
+    /* Asegura que el contenido se centre horizontalmente dentro del contenedor */
 }
 
-#estacion img {
-    width: 0px;
-    flex-grow: 1;
+.responsive-img {
+    width: 100%;
+    height: 100%;
+    transition: width 0.3s ease-in-out, flex-grow 0.3s ease-in-out;
+    /* Suaviza las transiciones de tamaño */
     object-fit: cover;
-    opacity: .8;
-    transition: 0.3s ease;
+    /* Mantiene las proporciones de la imagen al ajustar el tamaño */
+    flex: 1;
+    /* Flexibilidad inicial para todas las imágenes */
 }
 
-#estacion img:hover{
-    width: 100px;
-    opacity: 1;
+.responsive-img:hover {
+    flex: 2;
+    /* Aumenta el espacio de la imagen en hover */
 }
 
 
 #estacion-texto {
     max-width: 100vh;
     display: flex;
-    justify-content: center;
-    /* Asegura que los elementos estén centrados horizontalmente */
+    justify-content:space-around;
     margin-top: -100px;
-    /* Reduce espacio superior */
     margin-bottom: 300px;
-    /* Espacio inferior */
-    padding-left: 980px;
-    /* Añade algo de padding si es necesario */
+    margin-left: 560px;
 }
 
 #estacion-texto p {
-    text-align: center;
-    margin: 5px -725px;
-    /* Reduce los márgenes superior e inferior, y ajusta los laterales para más cercanía */
-    font-size: 16px;
+    font-size: 18px;
+    padding-right: 180px;
+    padding-left: 40px;
+    margin-left: -30px;
 }
 
 
