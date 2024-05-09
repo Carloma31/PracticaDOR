@@ -759,10 +759,14 @@ video {
     box-shadow: 10px 6px 37px -13px rgba(51, 51, 51, 0.70);
     transform: scale(1.3);
     transition: 0.5s;
+    z-index: 10;
+    position: relative;
 }
 
 .art-description {
     font-size: large;
+    position: relative;
+    top: 50px;
 }
 
 .price {
@@ -770,6 +774,8 @@ video {
     font-size: larger;
     font-weight: bolder;
     text-align: end;
+    position: relative;
+    top: 50px;
 }
 
 
