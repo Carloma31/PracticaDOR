@@ -159,7 +159,7 @@ nav.breadcrumbs {
 }
 
 nav.breadcrumbs a {
-    color: #4196ab;
+    color: black;
     text-decoration: none;
     padding: 0 3px; /* Ajustado para reducir espacio */
 }
@@ -410,6 +410,7 @@ nav.breadcrumbs a:hover {
     padding-right: 180px;
     padding-left: 40px;
     margin-left: -30px;
+    margin-top: 0px;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
 }
 
