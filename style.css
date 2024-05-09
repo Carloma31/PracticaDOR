@@ -575,7 +575,7 @@ video {
 .price-article {
     height: 30px;
     width: 100px;
-    color: white;
+    color: black;
     background-color: #4196ab;
     text-align: center;
     justify-content: center;
@@ -583,6 +583,9 @@ video {
     margin-top: 50px;
     font-size: 20px;
     border-radius: 3px;
+    padding-top: 3px;
+    padding-left: 3px;
+    font-weight: 550;
 }
 
 .iva {
